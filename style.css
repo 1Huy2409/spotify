@@ -1,0 +1,409 @@
+* {
+    box-sizing: border-box;
+}
+span {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: 100%;
+    background-color: black;
+    position: relative;
+}
+.navbar {
+    height: 64px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+.form-input input {
+    border: none;
+}
+.app-logo {
+    font-size: 32px;    
+}
+.app-logo .app-logo-icon {
+    margin-left: 20px;
+    color: #fff;
+}
+.home-controller {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -20px;
+    margin-right: -16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.home-controller .home-logo-icon {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #1F1F1F;
+    font-size: 24px;
+    color: #fff;
+}   
+.home-controller .form-input {
+    padding: 7px 8px;
+    border-radius: 24px;
+    background-color: #2A2A2A;
+    display: flex;
+    align-items: center;
+}
+.home-controller .search-icon {
+    color: #B3B3A6;
+    font-size: 24px;
+    margin-left: 8px;
+}
+.home-controller .form-input input {
+    margin-left: 8px;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #fff;
+    width: 300px;
+}
+.home-controller .form-input input::placeholder {
+    color: #B3B3A6;
+}
+.home-controller .form-input span {
+    color: #B3B3A6;
+    font-size: 28px;
+}
+.home-controller .form-input .folder-icon {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.individual-settings {
+    margin-right: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    color: white;
+}
+.individual-settings .install .install-icon {
+    color: white;
+    margin-right: 4px;
+}
+.individual-settings .notify-icon{
+    color: #ACACAC;
+}
+.individual-settings .user-logo {
+    background-color: #F573A0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 8px 12px;
+    font-weight: 600;
+    border: 8px solid #1F1F1F;
+}
+.inner-container {
+    height: 100vh;
+    margin-inline: 8px;
+    background-color: black;
+    display: flex;
+
+}
+.inner-container .sidebar {
+    position: fixed;
+    top: 64px;
+    width: 25%;
+    height: 78%;
+    background-color: #121212;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.inner-container .header-sidebar {
+    padding: 16px 12px;
+    background-color: #121212;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}   
+.library {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.library a{
+    color: #ACACAC;
+}                                                                       
+.library-controller {
+    color: #ACACAC;
+    display: flex;
+    gap: 10px;
+}
+.library-controller-icon {
+    display: flex;
+    gap: 5px;
+}
+.library-icon {
+    text-decoration: none;
+}
+.library-controller-icon a {
+    text-decoration: none;
+}
+.library-propose {
+    margin-top: 12px;
+    color: white;
+}
+.library-propose .close-icon {
+    text-decoration: none;
+    padding: 8px 10px;
+    background-color: #333333;
+    border-radius: 50%;
+    margin-right: 4px;
+    font-size: 18px;
+    color: #ACACAC;
+    text-align: center;
+}
+.library-propose .close-icon i {
+    transform: translateX(20%);
+}
+.library-manage, .library-manage a {
+    color: #ACACAC;
+}
+.library-manage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-sidebar {
+    position: absolute;
+    top: 110px;
+    padding-left: 12px;
+    padding-right: 12px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    transition: ease-in-out 0.25;
+}
+.content-sidebar:hover {
+    overflow-y: auto;
+}
+.hover-grey {
+    padding: 8px 10px;
+    background-color: #333333;
+    display: inline-block;
+    border-radius: 20px;
+}
+.library-icon-search {
+    font-size: 18px;
+}
+.music-items {
+    padding: 0;
+    list-style: none;
+}
+.content-sidebar::-webkit-scrollbar {
+    width: 12px; /* Độ rộng của thanh cuộn */
+}
+.content-sidebar::-webkit-scrollbar-thumb {
+    background-color: #898989;
+}
+.content-sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #ccc; /* Đổi màu khi hover */
+}
+.music-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.music-item .music-title {
+    color: white;
+}
+.music-item .music-desc {
+    color: #B3B0A0;
+}
+.music-info p {
+    margin: 0;
+}
+.music-item .music-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    height: 86px;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+}
+.current-song-avatar {
+    display: flex;
+    align-items: center;
+}
+.footer .current-song-avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+.footer .current-song {
+    display: flex;
+    margin-left: 16px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.current-song-info p {
+    margin: 0;
+}
+.current-song-info .song-name {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+.current-song-info .singer {
+    color: #ACACAC;
+    font-size: 14px;
+}
+.current-song .plus-icon {
+    color: #ACACAC;
+}
+.footer .audio-play {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.audio-play .audio-controller .button-control {
+    font-size: 24px;
+    color: rgb(149, 145, 145);
+    text-align: center;
+    margin-bottom: 10px;
+}
+.audio-play .audio-controller .button-control i {
+    margin-inline: 8px;
+}
+.audio-play .audio-controller .button-control .pause {
+    padding: 5px 9px;
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+}
+.shuffle, .repeat {
+    font-size: 16px;
+    color: #B3B3B3 !important;
+    transition: transform .5s;
+}
+.audio-play .audio-controller .audio-time {
+    color: #B3B3B3;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.audio-play .audio-controller .audio-line {
+    content: "";
+    width: 514px;
+    height: 4px;
+    background-color: #4D4D4D;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+}
+.audio-play .audio-controller .audio-line .audio-line-child {
+    content: "";
+    width: 30%;
+    height: 4px;
+    background-color: white;
+    border-radius: 4px;
+    display: inline-block;
+    position: absolute;
+}
+.footer .audio-settings {
+    margin-right: 8px;
+    color: #b3b3b3;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.footer .audio-settings .volume-line {
+    content: "";
+    width: 93px;
+    height: 4px;
+    background-color: white;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* hover */
+.hover-scale {
+    cursor: pointer;
+    transition: transform .5s;
+}
+.hover-white {
+    cursor: pointer;
+}
+.hover-scale:hover {
+    transform: scale(1.1);
+}
+.hover-white:hover {
+    color: white;
+}
+.music-avatar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.music-item {
+    padding: 10px 10px;
+}
+.music-item:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #1F1F1F;
+}
+.music-item:hover .control-play {
+    color: white;
+}
+.control-play {
+    color: transparent;
+    position: absolute;
+    font-size: 24px;
+    display: block;
+}
+.hover-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ACACAC;
+}
+.hover-circle:hover {
+    background-color: #282828;
+    color: white;
+}
+.song-name:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.singer:hover {
+    color: white;
+    text-decoration: underline;
+}
+.hover-grey:hover {
+    cursor: pointer;
+    background-color: #444444;
+}
