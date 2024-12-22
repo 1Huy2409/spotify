@@ -114,11 +114,13 @@ body {
     margin-inline: 8px;
     background-color: black;
     display: flex;
-
+    justify-content: space-between;
+    gap: 10px;
 }
 .inner-container .sidebar {
     position: fixed;
     top: 64px;
+    position: relative;
     width: 25%;
     height: 78%;
     background-color: #121212;
@@ -391,6 +393,7 @@ body {
     color: #ACACAC;
 }
 .hover-circle:hover {
+    cursor: pointer;
     background-color: #282828;
     color: white;
 }
@@ -406,4 +409,301 @@ body {
 .hover-grey:hover {
     cursor: pointer;
     background-color: #444444;
+}
+.content {
+    position: fixed;
+    top: 64px;
+    left: calc(25% + 10px);
+    width: calc(47%);
+    height: 78%;
+    /* background-color: red; */
+    background-image: linear-gradient(180deg, #006000 2%, #121212 40%);
+    border-radius: 10px;
+}
+.content::-webkit-scrollbar {
+    display: none;
+}
+.content:hover {
+    overflow-y: auto;
+}
+.content li {
+    list-style: none;
+}
+/* 25% + 55%  */
+
+
+.category-buttons {
+    padding: 20px 30px;
+    position: fixed;
+}
+.category-buttons button {
+    padding: 8px 6px;
+    background-color: rgba(0, 30, 0,0.5);
+    border-radius: 20px;
+    color: white;
+    border: 1px solid transparent;
+    font-weight: 600;
+}
+.category-buttons button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+.category-buttons button.active {
+    background-color: white;
+    color: black;
+}
+.albums {
+    margin-top: 80px;
+    margin-left: 30px;
+}
+.album-item img {
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.album-list {
+    max-height: 240px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+.album-item {
+    margin-bottom: 8px;
+    margin-right: 10px;
+    height: 52px;
+    color: white;
+    display: flex;  
+    align-items: center;
+    gap: 8px;
+    background-color: #3A372E;
+    border-radius: 5px;
+}
+.box-play {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    margin-left: auto;
+    margin-right: 8px;
+}
+.album-item:hover {
+    cursor: pointer;
+    background-color: #414449;
+}
+.album-item:hover .box-play {
+    background-color: #18D962;
+    color: black;
+}
+.for-you {
+    margin-left: 30px;
+}
+.for-you h2 {
+    color: white;
+}
+.row-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
+.row-list::-webkit-scrollbar {
+    display: none;
+}
+.my-list-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+.my-list-item p {
+        margin-top: 4px;
+        margin-bottom: 3px;
+    color: #949494;
+}
+.my-list-item {
+    border-radius: 10px;
+    padding: 10px 8px;
+    position: relative;
+}
+.my-list-item:hover {
+    cursor: pointer;
+    background-color: #1E1E1E;
+}
+.my-list-item:hover .box-play2 {
+    background-color: #18D962;
+    color: black;
+}
+.box-play2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+}
+.suggest-playlist {
+    position: fixed;
+    top: 64px;
+    left: calc(72% + 15px);
+    width: calc(28% - 25px);
+    height: 78%;
+    background-color: #121212;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px 15px;
+    overflow-y: auto
+}
+.suggest-playlist::-webkit-scrollbar {
+    display: none;
+}
+.suggest-playlist ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.suggest-playlist {
+    color: white;
+
+}
+.header-suggest {
+    padding-top: 5px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-suggest-controller {
+    display: flex;
+    gap: 10px;
+}
+.header-suggest .singer-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.top-suggest-avatar {
+    border-radius: 10px;
+    height: 380px;
+    background-image: url("./img/nobita.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.top-suggest-title {
+    margin-block: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.song-infor .song-name-suggest {
+    color: white !important;
+    display: block;
+    font-size: 28px;
+}
+.song-infor .song-name-suggest:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.song-infor span {
+    color: #ACACAC  ;
+}
+.song-infor .song-singer:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+}
+.top-suggest-control {
+    display: flex;
+    gap: 15px;
+}
+.top-suggest-control a{
+    color: #ACACAC;
+    text-decoration: none;
+    font-size: 18px;
+}
+/* mid suggest */
+.mid-suggest {
+    padding: 20px 16px;
+    background-color: #1F1F1F;
+    border-radius: 10px;
+}
+.mid-suggest .participation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.col-1 {
+    font-size: 16px;
+    font-weight: 550;
+}
+.col-2 {
+    color: #ACACAC;
+    transition: transfrom .5s;
+}
+.col-2:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+    transform: scaleZ(1.1);
+}
+.participation-list .participation-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.participation-item .participation-name {
+    display: block;
+}
+.participation-item .participation-role {
+    color: #ACACAC;
+}
+.participation-item .follow-button {
+    padding: 8px 12px;
+    border:1px solid #ACACAC;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform .5s;
+}
+.participation-item .follow-button:hover {
+    border-color: white;
+    transform: scaleZ(1.1);
+}
+.bot-suggest {
+    margin-top: 15px;
+    padding: 20px 16px;
+    background-color: #1F1F1F;
+    border-radius: 10px;
+}
+/* .bot-suggest .music-item {
+    padding-bottom: 0 !important;
+} */
+.bot-suggest .col-2 {
+    float: right;
+}
+.waiting-list-item {
+    margin-top: 8px;
+}
+.waiting-list-item .song-singer:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+}
+.waiting-list-item .music-item   {
+    padding: 10px 10px;
+}
+.waiting-list-item .music-item:hover {
+    background-color: #3F3F3F;
 }
