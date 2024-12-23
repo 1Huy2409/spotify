@@ -419,6 +419,7 @@ body {
     /* background-color: red; */
     background-image: linear-gradient(180deg, #006000 2%, #121212 40%);
     border-radius: 10px;
+    overflow: hidden;
 }
 .content::-webkit-scrollbar {
     display: none;
